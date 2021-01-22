@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h3>Example of Progress Bar Using JavaScript</h3>
+
+<div id="progress-block" style="width: 400px">
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+
+        #progress-background {
+            background-color: #ddd;
+            border-radius: 8px;
+        }
+
+        #progress-bar {
+            padding: 5px 0;
+            font-weight: bold;
+            width: 0;
+            height: 20px;
+            background-color: #4CAF50;
+            border-radius: 8px;
+        }
+
+        #progress-val {
+            width: 100%;
+            text-align: center;
+            display: block;
+            color: white;
+        }
+
+        #progress-statuses {
+            padding: 10px 0;
+            text-align: center;
+            color: grey;
+        }
+
+        #progress-result-link {
+            background: red;
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            margin: auto;
+            display: block;
+            text-align: center;
+            width: fit-content;
+            opacity: 1;
+            transition: opacity 1s;
+        }
+
+        #progress-result-link.fade {
+            height: 0px !important;
+            opacity: 0;
+            padding: 0;
+            transition: opacity 1s;
+        }
+
+    </style>
+    <div id="progress">
+        <div id="progress-background">
+            <div id="progress-bar">
+                <span id="progress-val"></span>
+            </div>
+        </div>
+        <div id="progress-statuses">
+        </div>
+        <a class="fade" id="progress-result-link" href="#">Click ME!!!</a>
+    </div>
+</div>
+
+<br>
+<button onclick="runProgressBar(this)">Run Progress</button>
+
+<script src="progressbar.js"></script>
+
+</body>
+</html>
