@@ -75,7 +75,7 @@ JS-билиотека с методами для отрисовки работы
 <button onclick="runProgressBar()">Run Progress</button>
 ```
 
-Вариант 2 - Кнопка при нажатии на которую будет запущен Progress Bar. Кнопка не исчезнет.
+Вариант 3 - Кнопка при нажатии на которую будет запущен Progress Bar. Кнопка не исчезнет.
 ```JS
 function showModal() {
 // ваш код
@@ -91,7 +91,6 @@ function showModal() {
     'Text2',
     'Text3',
     'Text4',
-    'Text5',
-    'Text6'
+    'Text5'
   ]
 ```
