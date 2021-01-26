@@ -2,19 +2,80 @@ JS-билиотека с методами для отрисовки работы
 =====================
 Обязательный код, в котором будет отрисовываться Progress Bar
 ```HTML
-     <div id="progress">
-        <div id="progress-background">
-            <div id="progress-bar">
-                <span id="progress-val"></span>
+    <div id="zatemnenie">
+    <div id="okno">
+        <a href="#" class="close">X</a>
+        <p>
+            Всплывающее окошко!
+        </p>
+
+        <div id="progress">
+            <div id="progress-background">
+                <div id="progress-bar">
+                    <span id="progress-val"></span>
+                </div>
             </div>
+            <div id="progress-statuses">
+            </div>
+            <a class="fade" id="progress-result-link" href="#">Click ME!!!</a>
         </div>
-        <div id="progress-statuses">
+        <div id="progress-block" style="width: 400px">
         </div>
-        <a class="fade" id="progress-result-link" href="#">Click ME!!!</a>
     </div>
+
+</div>
 ```
 Возможные стили для прогресс бара
 ```CSS
+         #zatemnenie {
+             background: rgba(102, 102, 102, 0.5);
+             width: 100%;
+             height: 100%;
+             position: absolute;
+             top: 0;
+             left: 0;
+             display: none;
+         }
+
+         #okno {
+             width: 300px;
+             height: 180px;
+             text-align: center;
+             padding-top: 1px;
+             padding-right: 15px;
+             padding-bottom: 15px;
+             padding-left: 15px;
+             border: 3px solid #0000cc;
+             border-radius: 10px;
+             color: #0000cc;
+             position: absolute;
+             top: 0;
+             right: 0;
+             bottom: 0;
+             left: 0;
+             margin: auto;
+             background: #fff;
+         }
+
+         #zatemnenie:target {
+             display: block;
+         }
+
+         .close {
+             display: inline-block;
+             border: 1px solid #0000cc;
+             color: #0000cc;
+             padding: 0 12px;
+             margin: 10px;
+             text-decoration: none;
+             background: #f2f2f2;
+             font-size: 14pt;
+             cursor: pointer;
+         }
+
+         .close:hover {
+             background: #e6e6ff;
+         }
         #progress-background {
             background-color: #ddd;
             border-radius: 8px;
