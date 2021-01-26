@@ -1,5 +1,6 @@
 function runProgressBar (button = null) {
-  // Удаление кнопки вызова страрта прогресс-бара
+  let modal = document.getElementById("zatemnenie");
+  modal.setAttribute("style", "display: block");  // Удаление кнопки вызова страрта прогресс-бара
   if (button !== null)
     button.parentNode.removeChild(button)
 
@@ -17,8 +18,7 @@ function runProgressBar (button = null) {
     'Text2',
     'Text3',
     'Text4',
-    'Text5',
-    'Text6'
+    'Text5'
   ]
   textStatuses = textStatuses.slice(0, 5)
   let resultTextBlocks = []
@@ -61,7 +61,7 @@ function runProgressBar (button = null) {
   function showResult () {
     setTimeout(function () {
       progressBackground.hidden = true
-      textStatusesBlock.hidden = true
+      textStatusesBlock.hidden = false
       resultRefLink.classList.toggle('fade')
     }, 500)
 
