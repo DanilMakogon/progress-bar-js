@@ -11,7 +11,10 @@ function runProgressBar (button = null) {
   let progressVal = document.getElementById('progress-val')
   let textStatusesBlock = document.getElementById('progress-statuses')
   let resultRefLink = document.getElementById('progress-result-link')
-
+  let closeButton = document.getElementsByClassName('close')
+  closeButton[0].onclick = function() {
+    modal.setAttribute("style", "display: none");
+  }
   // Массив текстов для вывода в процессе загрузки [Максимум 5 текстов для равномерного отображения]
   let textStatuses = [
     'Text1',
